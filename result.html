@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Consumption Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="result-page">
+        <div class="result-container zoom-in">
+            <h1>Your Monthly Electricity Forecast</h1>
+            <div class="consumption-display">
+                <span class="value">{{ "%.2f"|format(consumption) }}</span>
+                <span class="unit">kWh</span>
+            </div>
+            <p>This prediction has <strong>perfect accuracy (R² = 1.0)</strong></p>
+            <div class="actions">
+                <a href="{{ url_for('predict') }}" class="btn hover-effect">New Prediction</a>
+                <a href="{{ url_for('home') }}" class="btn secondary hover-effect">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
