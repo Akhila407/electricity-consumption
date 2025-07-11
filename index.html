@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Consumption Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="fade-in">Electricity Consumption Forecast</h1>
+            <p class="fade-in">Predict</p>
+            <a href="{{ url_for('predict') }}" class="btn pulse">Get Prediction</a>
+        </div>
+    </div>
+</body>
+</html>
